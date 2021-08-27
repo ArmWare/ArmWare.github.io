@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Войти ArmWare</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="../css2.css?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/site.min.css">
+</head>
+<body>
+    <header>
+        <nav id="deadcode-navbar" class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.htm">Вернутся</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="pb-3">
+        
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+<form action="/Home/ControlPanel" method="post">            <div class="mb-3">
+
+                <input type="hidden" id="captchaVerify" name="captchaVerify">
+
+                <label for="accessKey" class="form-label deadcode-label">Ключ</label>
+                <input type="password" autocomplete="new-password" class="form-control deadcode-input" id="accessKey" name="accessKey" aria-describedby="accessKeyHelp">
+
+                    <div id="accessKeyHelp" class="form-text text-center">Вводите ключ которий вы купили!</div>
+            </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3 justify-content-center" style="display:grid;">
+                            <button type="submit" class="deadcode-button-enter"></button>
+                        </div>
+                    </div>
+                </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8DUYF5LQSx5KpiKFTSaMDYEHZhvgiOjJdDVHe6IWYrA6DTHR5CIt87Tew2tTU4L6Wp4QqOJkrngtBSOxc98C3aK6DdVSZJMO4F-Tjfnp72BLEx1wuHybzCh4CtpP7I_lbK2jspNhT7TkpKtkI6lwxEQ"></form>        </div>
+    </div>
+</div>
+    </main>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/site_public.min.js?v=_QwrjRRZTFx5ahpgDqhKTN9kIwWS2DlCdO7vtjohApY"></script>
+    
+    <script src="../recaptcha/api.js?render=6LchP-IbAAAAAD02afRYlR8ZZ6BdOGF9MxEog9LZ"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LchP-IbAAAAAD02afRYlR8ZZ6BdOGF9MxEog9LZ', { action: 'submit' }).then(function (token) {
+                document.getElementById("captchaVerify").value = token;
+            });
+        });
+    </script>
+
+</body>
+</html>
